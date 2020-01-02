@@ -17,33 +17,6 @@
       }
     },
     {
-      "PageSectionId": 2512,
-      "Code": "ImageAd",
-      "ParameterDictionary": {
-        "type": "1",
-        "imagegap": "0",
-        "shownumber": "4",
-        "imagelist": [
-          {
-            "link": "/#/search?categoryid=12",
-            "src": "https://haitao.nos.netease.com/6BXWTT4KF3v2CCD1KVT1809182052_960_480.jpg"
-          },
-          {
-            "link": "/#/product/4",
-            "src": "https://haitao.nosdn2.127.net/ThUbIr9WnE7TbTwTapp-kvAiT1809190053_960_480.jpg"
-          },
-          {
-            "link": "/#/product/4",
-            "src": "https://haitao.nos.netease.com/f3kJUUtkrDbsiU1LtopkHcBGgT1809182243_960_480.jpg"
-          },
-          {
-            "link": "/#/product/4",
-            "src": "https://haitao.nosdn2.127.net/EWQ1UI83HQ03U2TLaeShRtEhK19n7175ceTT1809191639_960_480.jpg"
-          }
-        ]
-      }
-    },
-    {
       "PageSectionId": 2513,
       "Code": "ImageAd",
       "ParameterDictionary": {
@@ -55,82 +28,6 @@
             "link": "",
             "linkname": "",
             "src": "https://haitao.nos.netease.com/gr4TfN5hhFhFg1CaUgya1mdkPDLpE4WTT1806271501_1125_144.png",
-            "title": ""
-          }
-        ]
-      }
-    },
-    {
-      "PageSectionId": 2514,
-      "Code": "ImageText",
-      "ParameterDictionary": {
-        "type": "1",
-        "showtype": "1",
-        "shownumber": "4",
-        "color": "",
-        "backgroundcolor": "",
-        "imagelist": [
-          {
-            "link": "",
-            "src": "https://haitao.nos.netease.com/gefNTDIqyQsSAEtSpy222T1808221621_192_220.jpg",
-            "title": ""
-          },
-          {
-            "link": "",
-            "src": "https://haitao.nosdn2.127.net/NVSMWxQKvHyakuP6WruN3T1809031519_192_220.jpg",
-            "title": ""
-          },
-          {
-            "link": "",
-            "src": "https://haitao.nosdn1.127.net/2dWeQg9FCfC8whIZWhac4T1809031520_192_220.jpg",
-            "title": ""
-          },
-          {
-            "link": "",
-            "src": "https://haitao.nosdn1.127.net/kZZ6h45lVQhRZLOJPHJd1T1808171739_192_220.jpg",
-            "title": ""
-          },
-          {
-            "link": "",
-            "src": "https://haitao.nosdn1.127.net/VNeftDVe3h9rgEq7MtfDT1809061111_192_220.jpg",
-            "title": ""
-          }
-        ]
-      }
-    },
-    {
-      "PageSectionId": 2515,
-      "Code": "ImageText",
-      "ParameterDictionary": {
-        "type": "1",
-        "showtype": "1",
-        "shownumber": "4",
-        "color": "",
-        "backgroundcolor": "",
-        "imagelist": [
-          {
-            "link": "",
-            "src": "https://haitao.nosdn2.127.net/GvpaR0ThVvgBkgT7Vf0yxk2T1809181557_192_220.jpg",
-            "title": ""
-          },
-          {
-            "link": "",
-            "src": "https://haitao.nos.netease.com/EqTdbMtyfOtDzr0DtcTD90hr2T1809031521_192_220.jpg",
-            "title": ""
-          },
-          {
-            "link": "",
-            "src": "https://haitao.nosdn2.127.net/Bkbtx8pB7u6B5S9OCU4Eir2f1T1808171744_192_220.jpg",
-            "title": ""
-          },
-          {
-            "link": "",
-            "src": "https://haitao.nosdn2.127.net/PnANhp9RpFloeI9VhfPXg8T1808171745_192_220.png",
-            "title": ""
-          },
-          {
-            "link": "",
-            "src": "https://haitao.nos.netease.com/HT4D5CRc3ZZRsuRkeCnTT1808171746_192_220.jpg",
             "title": ""
           }
         ]
