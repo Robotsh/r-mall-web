@@ -1,32 +1,45 @@
+`
 <template>
     <div :style="'background-color:'+((page.BackgroundColor==undefined||page.BackgroundColor=='')?'#fff':page.BackgroundColor)">
         <div :style="'height:'+topheight+'px'"></div>
-        <div v-for="(item,index) in page.Sections" :key="index">
-            <imageAd v-if="item.Code=='ImageAd'" :data="item.ParameterDictionary"></imageAd>
+        <van-pull-refresh
+                v-model="isLoading"
+                success-text="刷新成功"
+                @refresh="onRefresh"
+        >
 
-            <imageText v-if="item.Code=='ImageText'" :data="item.ParameterDictionary"></imageText>
+            <imageAd :data="whellList"/>
 
-            <pageLine v-if="item.Code=='Line'" :data="item.ParameterDictionary"></pageLine>
+            <imageText :data="buttonList"/>
 
-            <whitespace v-if="item.Code=='Line'" :data="item.ParameterDictionary"/>
+            <div v-for="(item,index) in page.Sections" :key="index">
 
-            <pageText v-if="item.Code=='Text'" :data="item.ParameterDictionary"></pageText>
 
-            <notice v-if="item.Code=='Notice'" :data="item.ParameterDictionary"></notice>
+                <pageLine v-if="item.Code=='Line'" :data="item.ParameterDictionary"></pageLine>
 
-            <search v-if="item.Code=='Search'" :data="item.ParameterDictionary"
-                    v-on:settopheight="settopheight($event)"></search>
+                <whitespace v-if="item.Code=='Line'" :data="item.ParameterDictionary"/>
 
-            <pageTitle v-if="item.Code=='Title'" :data="item.ParameterDictionary"></pageTitle>
+                <pageText v-if="item.Code=='Text'" :data="item.ParameterDictionary"></pageText>
 
-            <cube v-if="item.Code=='Cube'" :data="item.ParameterDictionary"></cube>
+                <notice v-if="item.Code=='Notice'" :data="item.ParameterDictionary"></notice>
 
-            <product v-if="item.Code=='Product'" :data="item"></product>
-        </div>
+                <search v-if="item.Code=='Search'" :data="item.ParameterDictionary"
+                        v-on:settopheight="settopheight($event)"></search>
 
+                <pageTitle v-if="item.Code=='Title'" :data="item.ParameterDictionary"></pageTitle>
+
+                <cube v-if="item.Code=='Cube'" :data="item.ParameterDictionary"></cube>
+
+                <product v-if="item.Code=='Product'" :data="item"></product>
+            </div>
+        </van-pull-refresh>
     </div>
 </template>
 <script>
+    import Vue from 'vue';
+    import {PullRefresh} from 'vant';
+
+    Vue.use(PullRefresh);
     import "../../assets/style/index.css";
     import whitespace from "../../components/page/whitespace.vue";
     import pageLine from "../../components/page/line.vue";
@@ -40,6 +53,7 @@
     import product from "../../components/page/product.vue";
     import {GetPage} from "../../api/page.js";
 
+
     export default {
         name: "page",
         components: {
@@ -50,14 +64,19 @@
             search,
             pageTitle,
             cube,
-            [imageAd.name]: imageAd,
-            imageText,
+            "imageAd": imageAd,
+            "imageText": imageText,
             product
         },
         data: function () {
             return {
                 topheight: 0,
+                count: 0,
+                isLoading: false,
                 page: {},
+                whellList: {},
+                buttonList: {}
+
             }
         },
         created: function () {
@@ -68,7 +87,15 @@
         methods: {
             settopheight: function (value) {
                 this.topheight = value;
-            }
+                this.topheight = 0;
+            },
+            onRefresh() {
+                setTimeout(() => {
+                    this.$toast('刷新成功');
+                    this.isLoading = false;
+                    this.count++;
+                }, 500);
+            },
         }
     }
 </script>

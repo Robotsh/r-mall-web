@@ -47,8 +47,8 @@
                     width = (width - margin * 2) / 2;
                     break;
                 case "7":
-                    max = 4;
-                    width = (width - margin * 2) / 2;
+                    max = 1;
+                    width = 375;
                     break;
             }
             margin = margin / 50;

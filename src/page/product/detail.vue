@@ -70,20 +70,20 @@
         </div>
         <van-goods-action>
 
-            <van-goods-action-mini-btn icon="like-o" @click="sorry">
+            <van-goods-action-icon icon="like-o" @click="sorry">
                 收藏
-            </van-goods-action-mini-btn>
-            <van-goods-action-mini-btn icon="cart" @click="onClickCart">
+            </van-goods-action-icon>
+            <van-goods-action-icon icon="cart" @click="onClickCart">
                 购物车
-            </van-goods-action-mini-btn>
-            <van-goods-action-big-btn @click="showSku">
+            </van-goods-action-icon>
+            <van-goods-action-button color="#FFB90F" @click="showSku">
                 加入购物车
-            </van-goods-action-big-btn>
-            <van-goods-action-big-btn primary @click="showSku">
+            </van-goods-action-button>
+            <van-goods-action-button color="#FF4500" @click="showSku">
                 立即购买
-            </van-goods-action-big-btn>
+            </van-goods-action-button>
         </van-goods-action>
-        <van-actionsheet v-model="show" title="促销" style="font-size:14px;">
+        <van-action-sheet v-model="show" title="促销" style="font-size:14px;">
 
             <van-cell is-link @click="sorry">
                 <template slot="title">
@@ -103,9 +103,9 @@
                     <span> 购买不超过5件时享受单件价￥8.00，超出数量以结算价为准</span>
                 </template>
             </van-cell>
-        </van-actionsheet>
+        </van-action-sheet>
 
-        <van-actionsheet v-model="showTag" title="服务说明" style="font-size:14px;">
+        <van-action-sheet v-model="showTag" title="服务说明" style="font-size:14px;">
 
             <van-cell>
                 <template slot="title">
@@ -142,7 +142,7 @@
                     <div style="margin-left: 24px;font-size:10px;color:#7d7d7d;">本商品由前海保税仓发货</div>
                 </template>
             </van-cell>
-        </van-actionsheet>
+        </van-action-sheet>
         <van-sku
                 v-model="showBase"
                 :sku="skuData.sku"
@@ -222,6 +222,10 @@
                     uploadMaxSize: 3
                 }
             };
+        },
+        mounted() {
+            // 切换页面时滚动条自动滚动到顶部
+            window.scrollTo(0,0);
         },
         methods: {
             formatPrice(data) {
@@ -343,4 +347,5 @@
             width: 100%;
         }
     }
+
 </style>

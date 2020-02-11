@@ -33,7 +33,9 @@
 <script>
     import axios from 'axios';
 
-    let length;
+
+
+
     export default {
 
         name: 'imageText',
@@ -49,13 +51,13 @@
         created: function () {
             axios({
                 method: 'post',
-                url: 'http://10.28.143.18:8088/home/productList',
+                url: 'http://127.0.0.1:8079/home/carouselList',
                 params: {
                     type: 2
                 },
             }).then((res) => {
                 this.buttonList = res.data;
-                console.log(res.data);
+                // console.log(res.data.carousels);
 
             })
             // var length = res.data.carousels.length / 2;

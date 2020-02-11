@@ -49,10 +49,10 @@
         </van-cell-group>
 
         <van-button size="large" type="primary" style="margin-top: 10px;">提交</van-button>
-        <van-actionsheet v-model="showPicker">
+        <van-action-sheet v-model="showPicker">
             <van-picker show-toolbar
                         title="申请原因" :columns="columns" @cancel="onCancel" @confirm="onConfirm"/>
-        </van-actionsheet>
+        </van-action-sheet>
     </div>
 </template>
 

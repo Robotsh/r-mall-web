@@ -17,6 +17,33 @@
       }
     },
     {
+      "PageSectionId": 2512,
+      "Code": "ImageAd",
+      "ParameterDictionary": {
+        "type": "1",
+        "imagegap": "0",
+        "shownumber": "4",
+        "imagelist": [
+          {
+            "link": "/#/search?categoryid=12",
+            "src": "https://haitao.nos.netease.com/6BXWTT4KF3v2CCD1KVT1809182052_960_480.jpg"
+          },
+          {
+            "link": "/#/product/4",
+            "src": "https://haitao.nosdn2.127.net/ThUbIr9WnE7TbTwTapp-kvAiT1809190053_960_480.jpg"
+          },
+          {
+            "link": "/#/product/4",
+            "src": "https://haitao.nos.netease.com/f3kJUUtkrDbsiU1LtopkHcBGgT1809182243_960_480.jpg"
+          },
+          {
+            "link": "/#/product/4",
+            "src": "https://haitao.nosdn2.127.net/EWQ1UI83HQ03U2TLaeShRtEhK19n7175ceTT1809191639_960_480.jpg"
+          }
+        ]
+      }
+    },
+    {
       "PageSectionId": 2513,
       "Code": "ImageAd",
       "ParameterDictionary": {
@@ -70,6 +97,21 @@
           {
             "link": "",
             "src": "https://haitao.nos.netease.com/APF1FTPcSWKGBg42uc064xW5kR_05T1809182215_480_240.jpg",
+            "title": ""
+          }
+        ]
+      }
+    },
+    {
+      "PageSectionId": 2518,
+      "Code": "Cube",
+      "ParameterDictionary": {
+        "type": "7",
+        "imagegap": "0",
+        "imagelist": [
+          {
+            "link": "",
+            "src": "https://haitao.nosdn2.127.net/UgGLMbgT8N2UfcbFeTw41p6TpSBEVC_03T1809190112_480_480.gif",
             "title": ""
           }
         ]
