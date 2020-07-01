@@ -42,6 +42,7 @@
                                 message: '确定删除吗？'
                             }).then(() => {
                                 DelFavorite(item.id).then(response => {
+                                    window.console.log(response)
                                     this.$toast('删除成功');
                                     this.$router.go(0);
                                 })

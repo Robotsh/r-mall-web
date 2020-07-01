@@ -7,39 +7,39 @@
                 </a>
             </van-swipe-item>
         </van-swipe>
-        <!--        <ul v-if="data.type=='2'">-->
-        <!--            <li v-for="(image,index) in data.imagelist" :key="index" class="cap-image-ad__content"-->
-        <!--                :style="'margin:'+data.imagegap+'px 0px;'">-->
-        <!--                <div class="image-wrapper">-->
-        <!--                    <a :href="image.url">-->
-        <!--                        <img alt="" class="cap-image-ad__image" v-lazy="image.src+''"/>-->
-        <!--                    </a>-->
-        <!--                </div>-->
-        <!--            </li>-->
-        <!--        </ul>-->
+<!--                <ul v-if="data.type=='2'">-->
+<!--                    <li v-for="(image,index) in data.imagelist" :key="index" class="cap-image-ad__content"-->
+<!--                        :style="'margin:'+data.imagegap+'px 0px;'">-->
+<!--                        <div class="image-wrapper">-->
+<!--                            <a :href="image.url">-->
+<!--                                <img alt="" class="cap-image-ad__image" v-lazy="image.src+''"/>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                </ul>-->
 
-        <!--                <div v-if="buttonList.type=='5'" class="cap-image-ad__image-nav" style="overflow-x: scroll">-->
-        <!--                    <div v-for="(item,index) in buttonList.carousels" :key="index" class="cap-image-ad__image-nav"-->
-        <!--                         :style="'width:20%;margin-right:'+0+'px;'">-->
-        <!--                        <a :href="item.link" class="cap-image-ad__link cap-image-ad__link&#45;&#45;image-nav">-->
-        <!--                            <div class="cap-image-ad__image">-->
-        <!--                                <img :src="item.src+'?w=640'" style="width: 100%; "/>-->
-        <!--                            </div>-->
-        <!--                        </a>-->
-        <!--                    </div>-->
-        <!--                </div>-->
+<!--                        <div v-if="buttonList.type=='5'" class="cap-image-ad__image-nav" style="overflow-x: scroll">-->
+<!--                            <div v-for="(item,index) in buttonList.carousels" :key="index" class="cap-image-ad__image-nav"-->
+<!--                                 :style="'width:20%;margin-right:'+0+'px;'">-->
+<!--                                <a :href="item.link" class="cap-image-ad__link cap-image-ad__link&#45;&#45;image-nav">-->
+<!--                                    <div class="cap-image-ad__image">-->
+<!--                                        <img :src="item.src+'?w=640'" style="width: 100%; "/>-->
+<!--                                    </div>-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
-        <!--        <div v-if="data.type=='3'||data.type=='4'" class='cap-image-ad__image-nav'-->
-        <!--             style='overflow-x:scroll;'>-->
-        <!--            <div v-for="(item,index) in data.imagelist" :key="index" class="image-wrapper"-->
-        <!--                 :style="'width:'+(data.type=='3'?'80':'40')+'%;margin-right:'+data.imagegap+'px;'">-->
-        <!--                <a :href="item.link" class="cap-image-ad__link cap-image-ad__link&#45;&#45;image-nav">-->
-        <!--                    <div class="cap-image-ad__image">-->
-        <!--                        <img :src="item.src+'?w=640'" style="width: 100%; "/>-->
-        <!--                    </div>-->
-        <!--                </a>-->
-        <!--            </div>-->
-        <!--        </div>-->
+<!--                <div v-if="data.type=='3'||data.type=='4'" class='cap-image-ad__image-nav'-->
+<!--                     style='overflow-x:scroll;'>-->
+<!--                    <div v-for="(item,index) in data.imagelist" :key="index" class="image-wrapper"-->
+<!--                         :style="'width:'+(data.type=='3'?'80':'40')+'%;margin-right:'+data.imagegap+'px;'">-->
+<!--                        <a :href="item.link" class="cap-image-ad__link cap-image-ad__link&#45;&#45;image-nav">-->
+<!--                            <div class="cap-image-ad__image">-->
+<!--                                <img :src="item.src+'?w=640'" style="width: 100%; "/>-->
+<!--                            </div>-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
     </div>
 </template>
 
@@ -65,15 +65,15 @@
             //查询首页的轮播图
             axios({
                 method: 'post',
-                url: 'http://127.0.0.1:8079/home/carouselList',
+                url: 'http://192.168.230.1:8079/home/carouselList',
                 params: {
                     type: 1
                 },
             }).then((res) => {
                 this.whellList = res.data;
                 let that = this;
-                let image = this.whellList.carousels[0];
-                console.log(image);
+                let image = res.data.carousels[0];
+                window.console.log(image);
                 let img = new Image();
                 img.src = image.url;
                 let width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;

@@ -33,12 +33,15 @@
         methods: {
             onSave(data) {
                 SaveAddress(data).then(response => {
+                    window.console.log(response)
                     this.$toast('保存成功');
                     this.$router.go(-1);
                 })
             },
             onDelete(data) {
                 DelAddress(data).then(response => {
+                    window.console.log(response)
+
                     this.$toast('删除成功');
                     this.$router.go(-1);
                 })
@@ -49,7 +52,7 @@
             if (id > 0) {
                 this.showDelete = true;
                 GetAddressById(id).then(response => {
-                    console.log(response);
+                    window.console.log(response);
                     this.info = response;
                 })
             }

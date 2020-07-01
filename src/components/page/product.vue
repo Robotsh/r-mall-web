@@ -44,7 +44,7 @@
 <script>
     import {getProduct} from "../../api/page.js";
     import axios from 'axios';
-    import BScroll from 'better-scroll';
+    // import BScroll from 'better-scroll';
     import Vue from 'vue';
     import {List} from 'vant';
 
@@ -109,7 +109,7 @@
             getRoadList() {
                 axios({
                     method: 'post',
-                    url: 'http://127.0.0.1:8079/home/productList',
+                    url: 'http://127.0.0.1:8089/home/productList',
                     params: {
                         page: this.page,
                         limit: this.pageSize

@@ -8,14 +8,12 @@
                 <van-button size="large" style="font-size: 14px;height: 42px;line-height: 42px;margin-bottom: 15px;">
                     手机号登录
                 </van-button>
-            </router-link>
-            <router-link to="/login/password">
                 <van-button size="large" style="font-size: 14px;height: 42px;line-height: 42px;margin-bottom: 15px;">
                     密码登录
                 </van-button>
             </router-link>
             <router-link to="/login/register">
-                <van-button size="large" type="primary" style="font-size: 14px;height: 42px;line-height: 42px;">
+                <van-button size="large" type="primary" style=" font-size: 14px;height: 42px;line-height: 42px;">
                     手机号一键注册
                 </van-button>
             </router-link>

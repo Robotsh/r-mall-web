@@ -2,7 +2,6 @@ import axios from 'axios'
 import {baseUrl, dataSources} from './env';
 import datas from '../data/data';
 
-
 const service = axios.create({
     baseURL: baseUrl, // api 的 base_url
     timeout: 5000, // request timeout
@@ -12,7 +11,7 @@ const service = axios.create({
 const servicef = function (parameter) {
     if (dataSources == 'local') {
         //定义回调函数和axios一致
-        const promist = new Promise(function (resolve, reject) {
+        const promist = new Promise(function (resolve) {
             var data = datas[parameter.url];
             if (typeof data == 'string') {
                 data = JSON.parse(data);
@@ -37,7 +36,7 @@ service.interceptors.request.use(
     },
     error => {
         // Do something with request error
-        console.log(error) // for debug
+        window.console.log(error) // for debug
         Promise.reject(error)
     }
 )
@@ -73,7 +72,7 @@ service.interceptors.response.use(
             //     })
             //   })
             // }
-            console.log(1);
+            window.console.log(1);
             return Promise.reject('error')
         } else {
             if (typeof response.data.Tag == 'string') {

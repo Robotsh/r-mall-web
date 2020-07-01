@@ -225,7 +225,7 @@
         },
         mounted() {
             // 切换页面时滚动条自动滚动到顶部
-            window.scrollTo(0,0);
+            window.scrollTo(0, 0);
         },
         methods: {
             formatPrice(data) {

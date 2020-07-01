@@ -106,7 +106,7 @@
             //根据key名获取传递回来的参数，data就是map
             this.$on('selectAddress', function (data) {
                 //赋值给首页的附近医院数据模型
-                console.log(1);
+                window.console.log(1);
             }.bind(this));
         },
     };

@@ -105,7 +105,7 @@
 <script>
     import {Search} from "vant";
     import Vue from 'vue';
-    import { Sidebar, SidebarItem } from 'vant';
+    import {Sidebar, SidebarItem} from 'vant';
 
     Vue.use(Sidebar);
     Vue.use(SidebarItem);
@@ -126,7 +126,6 @@
         },
         methods: {
             onSearch() {
-                console.log(this.value);
             },
             onClick(key) {
                 this.activeKey = key;
@@ -192,11 +191,8 @@
                     width: 100%;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    display: box;
                     display: -webkit-box;
                     display: -moz-box;
-                    display: -ms-box;
-                    display: -o-box;
                     line-clamp: 2;
                     -webkit-line-clamp: 2;
                     -moz-line-clamp: 2;

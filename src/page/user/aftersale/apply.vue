@@ -105,7 +105,7 @@
                 this.showPicker = false;
             },
             onRead(file) {
-                console.log(file.length);
+                window.console.log(file.length);
                 if (file.length == undefined) {
                     this.images.push(file.content);
                 } else {
@@ -113,7 +113,7 @@
                         this.images.push(item.content);
                     });
                 }
-                console.log(file)
+                window.console.log(file)
             },
             removeImage(index, image) {
                 this.images.splice(index, 1);
